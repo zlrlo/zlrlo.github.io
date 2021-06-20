@@ -1,10 +1,9 @@
 {
-  "name": "gatsby-casper",
-  "description": "Casper for gatsby",
+  "name": "blog",
+  "description": "It's a blog that records and shares what I've learned.",
   "version": "0.0.0",
   "private": true,
-  "author": "Scott Cooper <scttcper@gmail.com>",
-  "license": "MIT",
+  "author": "Beanba",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
