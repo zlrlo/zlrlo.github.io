@@ -86,11 +86,13 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
         {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
         <nav css={SiteNavStyles}>
           <SiteNavLeft className="site-nav-left">
-            {!isHome && <SiteNavLogo />}
+            {/* {!isHome && <SiteNavLogo />} */}
             <SiteNavContent css={[this.state.showTitle ? HideNav : '']}>
               <ul css={NavStyles} role="menu">
                 <li role="menuitem">
-                  <Link to="/" activeClassName="nav-current">Home</Link>
+                  <Link to="/" activeClassName="nav-current">
+                    Home
+                  </Link>
                 </li>
                 {/* <li role="menuitem">
                   <Link to="/about" activeClassName="nav-current">About</Link>
@@ -99,13 +101,19 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                   <Link to="/tags/getting-started/" activeClassName="nav-current">Getting Started</Link>
                 </li> */}
                 <li role="menuitem">
-                  <Link to="/tags/web-frontend/" activeClassName="nav-current">Web Frontend</Link>
+                  <Link to="/tags/web-frontend/" activeClassName="nav-current">
+                    Web Frontend
+                  </Link>
                 </li>
                 <li role="menuitem">
-                  <Link to="/tags/dev/" activeClassName="nav-current">Dev</Link>
+                  <Link to="/tags/dev/" activeClassName="nav-current">
+                    Dev
+                  </Link>
                 </li>
                 <li role="menuitem">
-                  <Link to="/tags/challenge/" activeClassName="nav-current">Challenge</Link>
+                  <Link to="/tags/challenge/" activeClassName="nav-current">
+                    Challenge
+                  </Link>
                 </li>
               </ul>
               {isPost && (
