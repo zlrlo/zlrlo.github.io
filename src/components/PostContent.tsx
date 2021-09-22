@@ -37,9 +37,10 @@ export const PostFullContent = styled.section`
   padding: 0 170px 6vw;
   min-height: 230px;
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 1.6em;
   background: #fff;
+  word-break: keep-all;
 
   @media (max-width: 1170px) {
     padding: 0 11vw;

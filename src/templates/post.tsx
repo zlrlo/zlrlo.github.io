@@ -218,7 +218,8 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
                           {displayDatetime}
                         </time>
                         <span className="byline-reading-time">
-                          <span className="bull">&bull;</span>{post.fields.readingTime.text}
+                          <span className="bull">&bull;</span>
+                          {post.fields.readingTime.text}
                         </span>
                       </div>
                     </section>
@@ -421,7 +422,7 @@ export const PostFullTitle = styled.h1`
 
 const PostFullImage = styled.figure`
   margin: 25px 0 50px;
-  height: 800px;
+  height: 400px;
   background: ${colors.lightgrey} center center;
   background-size: cover;
   border-radius: 5px;

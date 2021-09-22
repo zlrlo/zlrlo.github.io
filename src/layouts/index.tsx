@@ -277,8 +277,8 @@ const IndexLayout: React.FC<IndexProps> = props => {
           body {
             overflow-x: hidden;
             color: ${lighten('-0.3', colors.midgrey)};
-            font-family: -apple-system, BlinkMacSystemFont, 'Noto Serif KR', serif, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-              Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Noto Serif KR', serif, 'Segoe UI',
+              Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 1.6rem;
             line-height: 1.6em;
             font-weight: 400;
@@ -430,7 +430,7 @@ const IndexLayout: React.FC<IndexProps> = props => {
 
           h1 {
             margin: 0 0 0.5em 0;
-            font-size: 5.5rem;
+            font-size: 4.5rem;
             font-weight: 600;
           }
           @media (max-width: 500px) {
