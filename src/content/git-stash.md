@@ -3,6 +3,7 @@ layout: post
 title: '[Git] Stash'
 author: [Beanba]
 tags: ['dev']
+image: img/github.jpeg
 date: '2021-06-19T20:07'
 draft: false
 ---
