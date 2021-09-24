@@ -5,8 +5,8 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Beanba`s blog',
-    description: 'A blog that records and shares what I\'ve learned.',
+    title: 'Beanba blog',
+    description: "A blog that records and shares what I've learned.",
     siteUrl: 'https://beanba-blog.netlify.app', // full path to blog - no ending slash
   },
   mapping: {
@@ -114,7 +114,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Ghost\'s Blog',
+            title: "Ghost's Blog",
             match: '^/blog/',
           },
         ],
@@ -147,10 +147,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [
-          `Noto Serif KR\:200,300,400,500,600,700,900`,
-          `Noto Sans KR\:100,300,400,500,700`,
-        ],
+        fonts: [`Noto Serif KR\:200,300,400,500,600,700,900`, `Noto Sans KR\:100,300,400,500,700`],
         display: 'swap',
       },
     },
