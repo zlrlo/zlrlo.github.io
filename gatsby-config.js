@@ -7,13 +7,26 @@ module.exports = {
   siteMetadata: {
     title: 'Beanba blog',
     description: "A blog that records and shares what I've learned.",
-    siteUrl: 'https://beanba-blog.netlify.app', // full path to blog - no ending slash
+    siteUrl: 'https://beanba.site', // full path to blog - no ending slash
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
     'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://beanba.site',
+        sitemap: 'https://beanba.site/sitemap.xml',
+        policy: [
+          {
+            userAgent: '*',
+            allow: '/',
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-sharp',
       options: {
