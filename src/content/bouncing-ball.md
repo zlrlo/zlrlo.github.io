@@ -92,3 +92,7 @@ theme: {
   </div>
 </div>
 ```
+
+## Reference
+
+- [top-30-most-captivating-preloaders-for-your-website](https://medium.muz.li/top-30-most-captivating-preloaders-for-your-website-95ed1beff99d)
