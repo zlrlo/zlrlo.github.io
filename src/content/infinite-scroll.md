@@ -228,7 +228,7 @@ export const HomeFeed = () => {
 - fetchMore 함수를 실행하면 다음 데이터가 불러와지는데, 이때 기존 cache 데이터에 제대로 병합이 되지 않는다면 이 [링크](https://stackoverflow.com/questions/66415243/merge-previous-data-while-scrolling-on-relay-pagination-graphql)를 읽어보는 것이 좋다.
 - Apollo는 쿼리 인수에 after가 포함되어 있으면 before 이전 페이지를 병합한다. 따라서 first, after, before, last가 어떤 객체의 속성이 아닌 인수로 선언되어야 한다.
   ex) `paginationUserBookmarks(first: $first, after: $after)`
-- 누군가 나 처럼 이 문제에 부딪혀 고통받지 않도록...😇
+- 누군가 나 처럼 이 문제에 부딪혀 고통받지 않도록..😇
 
 ## 느낀 점
 
