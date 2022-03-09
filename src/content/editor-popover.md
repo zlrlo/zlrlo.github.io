@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[React] Popover 컴포넌트 만들기'
-author: [Beanba]
+author: [Mirabel]
 tags: ['Web Frontend']
 image: img/popover.jpg
 date: '2021-06-08T23:46'

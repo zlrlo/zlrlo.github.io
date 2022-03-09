@@ -1,7 +1,7 @@
-- id: Beanba
-  avatar: avatars/beanba.jpg
+- id: Mirabel
+  avatar: avatars/mirabel.png
   bio: I'm a web developer.
-  website: https://ghost.org/
+  website: https://beanba.site/
   location: Seoul
   profile_image: img/alex-knight-326705-unsplash.jpg
 - id: Ghost

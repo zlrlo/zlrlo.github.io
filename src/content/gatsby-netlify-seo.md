@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[SEO] Gatsby + Netlify 블로그 SEO 작업하기'
-author: [Beanba]
+author: [Mirabel]
 tags: ['dev']
 image: img/seo.jpg
 date: '2021-10-04T23:16'
@@ -31,8 +31,8 @@ SEO를 위해서는 텍스트 파일 형식의 로봇 텍스트 파일(robots.tx
 ```
 User-agent: *
 Allow: /
-Sitemap: https://beanba.site/sitemap.xml
-Host: https://beanba.site
+Sitemap: https://Mirabel.site/sitemap.xml
+Host: https://Mirabel.site
 ```
 
 - robots.txt 파일에서 특정 디렉토리는 검색이 되지 않도록 설정할 수도 있다. (Disallow 설정)
@@ -48,7 +48,7 @@ Host: https://beanba.site
 
 ## 3. 도메인 구매하기
 
-- [beanba.site](http://beanba.site) (저는 가비아에서 할인하는 것으로 구매하였습니다.)
+- [Mirabel.site](http://Mirabel.site) (저는 가비아에서 할인하는 것으로 구매하였습니다.)
 - Netlify에 구매한 도메인을 설정하고, DNS 정보를 확인한다.
 - 가비아에 Netlify에서 확인한 DNS configuration 등록한다. ([DNS 레코드 설정 방법 가이드](https://customer.gabia.com/manual/dns/3041/3040))
 

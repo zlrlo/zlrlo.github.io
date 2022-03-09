@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[React] 무한 스크롤 만들기 (React with GraphQL Pagination)'
-author: [Beanba]
+author: [Mirabel]
 tags: ['Web Frontend']
 image: img/writing.jpg
 date: '2021-09-27T16:33'

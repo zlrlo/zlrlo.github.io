@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[tailwindcss] 통통 튀는 공모양 preloader 만들기'
-author: [Beanba]
+author: [Mirabel]
 tags: ['Web Frontend']
 image: img/loading.jpeg
 date: '2021-09-22T22:11'
