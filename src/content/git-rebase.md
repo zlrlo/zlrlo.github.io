@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[Git] Rebase(리베이스, 재배치)'
-author: [Beanba]
+author: [Mirabel]
 tags: ['dev']
 image: img/github.jpeg
 date: '2021-06-19T19:16'

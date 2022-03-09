@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[React] react-virtualized를 활용해서 무한 스크롤 최적화하기'
-author: [Beanba]
+author: [Mirabel]
 tags: ['Web Frontend']
 image: img/react-virtualized.jpeg
 date: '2022-03-09T16:29'
