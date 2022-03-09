@@ -3,7 +3,7 @@
   "description": "It's a blog that records and shares what I've learned.",
   "version": "0.0.0",
   "private": true,
-  "author": "zlrlo",
+  "author": "Beanba",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
