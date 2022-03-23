@@ -111,8 +111,8 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                   </Link>
                 </li>
                 <li role="menuitem">
-                  <Link to="/tags/challenge/" activeClassName="nav-current">
-                    Challenge
+                  <Link to="/tags/algorithm/" activeClassName="nav-current">
+                    Algorithm
                   </Link>
                 </li>
               </ul>
