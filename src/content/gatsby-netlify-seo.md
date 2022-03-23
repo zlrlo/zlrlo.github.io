@@ -48,7 +48,7 @@ Host: https://Mirabel.site
 
 ## 3. 도메인 구매하기
 
-- [Mirabel.site](http://Mirabel.site) (저는 가비아에서 할인하는 것으로 구매하였습니다.)
+- [beanba.site](http://beanba.site) (저는 가비아에서 할인하는 것으로 구매하였습니다.)
 - Netlify에 구매한 도메인을 설정하고, DNS 정보를 확인한다.
 - 가비아에 Netlify에서 확인한 DNS configuration 등록한다. ([DNS 레코드 설정 방법 가이드](https://customer.gabia.com/manual/dns/3041/3040))
 
