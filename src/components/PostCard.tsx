@@ -197,6 +197,7 @@ const PostCardTitle = styled.h2`
   margin: 0 0 0.4em;
   line-height: 1.15em;
   transition: color 0.2s ease-in-out;
+  word-break: keep-all;
 
   @media (prefers-color-scheme: dark) {
     color: rgba(255, 255, 255, 0.85);
@@ -205,6 +206,7 @@ const PostCardTitle = styled.h2`
 
 const PostCardExcerpt = styled.section`
   font-family: 'Noto Sans KR', sans-serif;
+  word-break: keep-all;
 
   @media (prefers-color-scheme: dark) {
     /* color: color(var(--midgrey) l(+10%)); */

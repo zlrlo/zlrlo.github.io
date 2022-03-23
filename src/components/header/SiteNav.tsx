@@ -204,12 +204,14 @@ const SiteNavLeft = styled.div`
   @media (max-width: 700px) {
     margin-right: 0;
     padding-left: 5vw;
+    padding-right: 5vw;
   }
 `;
 
 const SiteNavContent = styled.div`
   position: relative;
   align-self: flex-start;
+  width: 100%;
 `;
 
 const NavStyles = css`
@@ -331,6 +333,10 @@ const HideNav = css`
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
   }
 `;
 

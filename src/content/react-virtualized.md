@@ -13,8 +13,8 @@ draft: false
 
 ## 리액트 공식 문서 살펴보기
 
-리액트 공식 문서에도 관련된 내용이 있었다. →
-[Virtualize Long Lists](https://reactjs.org/docs/optimizing-performance.html#virtualize-long-lists)
+리액트 공식 문서에도 관련된 내용이 있었다. <br />
+→ [Virtualize Long Lists](https://reactjs.org/docs/optimizing-performance.html#virtualize-long-lists)
 
 100개 또는 1000개 이상의 데이터를 가지는 긴 리스트에서는 "windowing" 기술을 추천한다는 내용이다. "windowing" 기술을 사용하면 컴포넌트의 re-render 시간과 DOM 노드 생성을 효과적으로 줄일 수 있다고 한다.
 
@@ -28,7 +28,7 @@ windowing 라이브러리 중 **react-window**와 **react-virtualized** 라이�
 
 커뮤니티 서비스에서 list item들의 size는 item 내용에 따라 달랐기 때문에 size 고정이 불가능했다. 따라서 react-virtualized를 사용하기로 결정했다.
 
-## windowing (aka virtualizing)
+## windowing <br /> (aka virtualizing)
 
 windowing 기법은 화면에 보이는 list의 item만 DOM에 만들기 때문에 무한 스크롤을 적용한 리스트처럼 긴 리스트의 성능을 효과적으로 향상시킨다.
 실제로 react-virtualized를 적용한 후 개발자 도구를 통해 확인해 보면 이해하기가 쉽다.<br />

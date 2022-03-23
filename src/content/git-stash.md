@@ -20,17 +20,17 @@ draft: false
 
 ## Stash 사용 방법
 
-`git stash` : 스택에 새로운 Stash가 만들어진다.<br />
-`git stash list` : 저장한 Stash를 확인한다.<br />
-`git stash apply <이름>` : Stash 적용하기, 이름이 없으면 Git은 가장 최근의 Stash를 적용한다.<br />
+`git stash` : <br />스택에 새로운 Stash가 만들어진다.<br /><br />
+`git stash list` : <br />저장한 Stash를 확인한다.<br /><br />
+`git stash apply <이름>` : <br />Stash 적용하기, 이름이 없으면 Git은 가장 최근의 Stash를 적용한다.<br />
 
     꼭 깨끗한 워킹 디렉토리나 Stash 할 때와 같은 브랜치에 적용해야 하는 것은 아니다.
     만약 충돌이 있으면 알려준다.
 
-`git stash apply —index` : Stash를 적용할 때 Staged 상태였던 파일을 Staged 상태까지 적용한다.<br />
-`git stash drop` : Stash를 제거한다.<br />
-`git stash pop` : Stash를 적용하고 나서 바로 스택에서 제거해준다.<br />
-`git stash -u` : 기본적으로 `git stash` 는 추적 중인 파일만 저장한다. 추적 중이지 않은 파일을 같이 저장하려면 `-u` 옵션을 붙여준다.<br />
+`git stash apply —index` : <br />Stash를 적용할 때 Staged 상태였던 파일을 Staged 상태까지 적용한다.<br /><br />
+`git stash drop` : <br />Stash를 제거한다.<br /><br />
+`git stash pop` : <br />Stash를 적용하고 나서 바로 스택에서 제거해준다.<br /><br />
+`git stash -u` : <br />기본적으로 `git stash` 는 추적 중인 파일만 저장한다. 추적 중이지 않은 파일을 같이 저장하려면 `-u` 옵션을 붙여준다.<br /><br />
 
 ## Stash를 적용한 브랜치 만들기
 
