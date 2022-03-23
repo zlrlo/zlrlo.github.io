@@ -41,7 +41,7 @@ draft: false
 
 ## Rebase로 특정 시점 Commit 지우는 방법
 
-1. `git rebase -i HEAD~n` : 지우고 싶은 커밋이 보이는 곳 까지(n) 이동
+1. `git rebase -i HEAD~n` : <br />지우고 싶은 커밋이 보이는 곳 까지(n) 이동<br />
 2. 지우고 싶은 커밋 키워드를 `drop`으로 수정
 
 ## Reference
