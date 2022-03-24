@@ -157,7 +157,7 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
                         </AuthorSocialLinkAnchor>
                       </AuthorSocialLink>
                     )}
-                    {author.twitter && (
+                    {/* {author.twitter && (
                       <AuthorSocialLink className="author-social-link">
                         <AuthorSocialLinkAnchor
                           href={`https://twitter.com/${author.twitter}`}
@@ -167,8 +167,8 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
                           Twitter
                         </AuthorSocialLinkAnchor>
                       </AuthorSocialLink>
-                    )}
-                    {author.facebook && (
+                    )} */}
+                    {/* {author.facebook && (
                       <AuthorSocialLink className="author-social-link">
                         <AuthorSocialLinkAnchor
                           href={`https://www.facebook.com/${author.facebook}`}
@@ -178,7 +178,7 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
                           Facebook
                         </AuthorSocialLinkAnchor>
                       </AuthorSocialLink>
-                    )}
+                    )} */}
                   </div>
                 </AuthHeaderContent>
               </SiteHeaderContent>
@@ -201,13 +201,11 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
 };
 
 export const pageQuery = graphql`
-  query($author: String) {
+  query ($author: String) {
     authorYaml(id: { eq: $author }) {
       id
       website
-      twitter
       bio
-      facebook
       location
       profile_image {
         childImageSharp {
