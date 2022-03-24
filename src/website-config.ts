@@ -49,12 +49,12 @@ export interface WebsiteConfig {
 }
 
 const config: WebsiteConfig = {
-  title: 'Mirabel | 기술 블로그',
+  title: 'Beanba | 기술 블로그',
   description: '',
   coverImage: 'img/blog-cover.png',
   logo: 'img/ghost-logo.png',
   lang: 'en',
-  siteUrl: 'https://beanba.site/',
+  siteUrl: 'https://zlrlo.github.io',
   // facebook: 'https://www.facebook.com/ghost',
   // twitter: 'https://twitter.com/tryghost',
   showSubscribe: false,

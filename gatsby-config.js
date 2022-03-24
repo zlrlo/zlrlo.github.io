@@ -5,9 +5,9 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Mirabel blog',
+    title: 'Beanba blog',
     description: "A blog that records and shares what I've learned.",
-    siteUrl: 'https://beanba.site', // full path to blog - no ending slash
+    siteUrl: 'https://zlrlo.github.io', // full path to blog - no ending slash
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://beanba.site',
-        sitemap: 'https://beanba.site/sitemap.xml',
+        host: 'https://zlrlo.github.io',
+        sitemap: 'https://zlrlo.github.io/sitemap.xml',
         policy: [
           {
             userAgent: '*',

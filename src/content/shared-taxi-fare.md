@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[다익스트라] 합승 택시 요금 자바스크립트 문제 풀이'
-author: [Mirabel]
+author: [Beanba]
 tags: ['algorithm']
 image: img/dijkstra-cover.jpeg
 date: '2022-03-20T18:03'

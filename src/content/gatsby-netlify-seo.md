@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[SEO] Gatsby + Netlify 블로그 SEO 작업하기'
-author: [Mirabel]
+author: [Beanba]
 tags: ['dev']
 image: img/seo.jpg
 date: '2021-10-04T23:16'
@@ -31,8 +31,8 @@ SEO를 위해서는 텍스트 파일 형식의 로봇 텍스트 파일(robots.tx
 ```
 User-agent: *
 Allow: /
-Sitemap: https://Mirabel.site/sitemap.xml
-Host: https://Mirabel.site
+Sitemap: https://zlrlo.github.io//sitemap.xml
+Host: https://zlrlo.github.io/
 ```
 
 - robots.txt 파일에서 특정 디렉토리는 검색이 되지 않도록 설정할 수도 있다. (Disallow 설정)
