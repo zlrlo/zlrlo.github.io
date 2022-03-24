@@ -54,7 +54,7 @@ const config: WebsiteConfig = {
   coverImage: 'img/blog-cover.png',
   logo: 'img/ghost-logo.png',
   lang: 'en',
-  siteUrl: 'https://beanba.site/',
+  siteUrl: 'https://zlrlo.github.io',
   // facebook: 'https://www.facebook.com/ghost',
   // twitter: 'https://twitter.com/tryghost',
   showSubscribe: false,
