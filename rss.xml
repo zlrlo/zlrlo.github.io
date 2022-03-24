@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Ghost's Blog]]></title><description><![CDATA[A blog that records and shares what I've learned.]]></description><link>https://beanba.site</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 24 Mar 2022 13:02:52 GMT</lastBuildDate><item><title><![CDATA[Github]]></title><description><![CDATA[A few things you should know The source of my project can be found on GitHub - zlrlo/github]]></description><link>https://beanba.site/github-link/</link><guid isPermaLink="false">https://beanba.site/github-link/</guid><pubDate>Sun, 05 Jun 4991 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;strong&gt;A few things you should know&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The source of my project can be found on GitHub - &lt;a href=&quot;https://github.com/zlrlo&quot;&gt;zlrlo/github&lt;/a&gt;&lt;/p&gt;
+&lt;!-- ### Key skills
+
+**🌏 Language** : `HTML`, `CSS`, `Typescript`, `Javascript`&lt;br /&gt;
+**🌴 Frontend** : `React(Hooks API)`, `styled-components`, `Redux`, `GraphQL`, `Storybook`, `Tailwind`&lt;br /&gt;
+**🌱 Backend** : `Node.js`, `Express`, `MySQL`, `Passport`, `Sequelize`, `Apollo`, `MongoDB`&lt;br /&gt;
+**💫 DevOps** : `NCP(Naver Cloud Platform)`, `Heroku`, `Netlify`&lt;br /&gt; --&gt;</content:encoded></item><item><title><![CDATA[[다익스트라] 합승 택시 요금 자바스크립트 문제 풀이]]></title><description><![CDATA[프로그래머스 level3 문제 프로그래머스 - 합승 택시 요금 n이 최대 20…]]></description><link>https://beanba.site/shared-taxi-fare/</link><guid isPermaLink="false">https://beanba.site/shared-taxi-fare/</guid><pubDate>Sun, 20 Mar 2022 09:03:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;프로그래머스 level3 문제&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/72413&quot;&gt;프로그래머스 - 합승 택시 요금&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;n이 최대 200이 될 수 있다는 것을 보고 이 문제는 재귀로 풀 수 없다는 것을 알았다. 다익스트라 알고리즘으로 접근해야 한다는 느낌이 있었지만.. 정말 느낌만 있었을 뿐 다익스트라 알고리즘에 대한 기억이 나지 않았다..ㅎ 다시 공부한 김에 미래의 나를 위해 블로그에 기록을 남겨놓는다!&lt;/p&gt;
+&lt;h2&gt;다익스트라 알고리즘&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;재귀 호출 없이 최단거리(최소비용)를 구하는 알고리즘이다.&lt;/li&gt;
+&lt;li&gt;사용 예 : 지하철 노선도에서 최단 경로를 알려주는 프로그램&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;다익스트라 알고리즘 원리&lt;/h2&gt;
+&lt;p&gt;합승 택시 요금 카카오 문제를 풀기 전에 간단한 다익스트라 알고리즘 문제를 풀어보면 도움이 많이 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 780px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0ba66d654a8906415510eb927b545544/8a72f/daijkstra.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 82.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAACWElEQVQ4y4WUy2sTQRzH9yAe/Dt6F7x7U1AQz96sNxF68R/oTRD1Uugh0pv0oMXXIQiiUkx91WLaRqLWJBSbZrPbJLs7O7PPmf3KzD6abBNd+DGPZT7z/b1Gw3++JEkm1rFIEPEEQZzAlxZllq21WZDc5GfaDEsvttHRbbX2Y6HMixJ4cszAcq2VlYyDIi7UuLD8HtrFCq4uVtXayxR5UQpLwVMUjruXz1kQoFLdxdmbT7D46BNYGIGwADSIFYRFQlkKFClwXJXv+xgOBmo+JAw/D0z4YQjDomqvb1N8bfwCYT5CAZCAww24UqsUSlDMBXjmnm1ZWK9tQB+5sKmXuhhEaOzrai4SCWVoGzZoyAuPgiwEEy4LkcC0qTIuRLHv+iGIF6RZzi7+rY/QPDjC0stdPHhaV7CAJ9CYH2Hl1XfU2wZM21Xxmci2EDiyCWzqZwplyaTQzT0Dpy5VcPryQ2w0e2pPu/t4C9qFCs7ffiYRxaE8pp12G5+3voGGcXGJyP7tdPqYv/cGN+6/hUVTIVr1Swdz11exsLyOKI6n1GECy2WFwvwiw3LR0YcT9SsvUjGU8RGJgOlQWCyciGmebeYf70uYlSWs3ASaGKs94jh4V/uoMpwHP+0U97hrHIZ6o4nDbvdEI8hRlU2uhFIKvXeoOmS/P4JhEUQxx48/pvrfHTggXgiXOHAIKSlMM6DNegTCmKPVG+DandeYm19FdbOFmPN/PhzIgeU+zhXLEjp3aw1nrqxgrbZX1GHZzRPAabfm0O22iecfWjNfoqkKZ0JLh2apGgf+BUKnEqbVByB5AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Dijkstra Image&quot;
+        title=&quot;Dijkstra Image&quot;
+        src=&quot;/static/0ba66d654a8906415510eb927b545544/8a72f/daijkstra.png&quot;
+        srcset=&quot;/static/0ba66d654a8906415510eb927b545544/0eb09/daijkstra.png 500w,
+/static/0ba66d654a8906415510eb927b545544/8a72f/daijkstra.png 780w&quot;
+        sizes=&quot;(max-width: 780px) 100vw, 780px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위 그림에서 A에서 C까지 가는 최소 비용이 35만 원이라는 것은 눈으로 보면 쉽게 알 수 있다. (A → D → B → C)&lt;/p&gt;
+&lt;p&gt;이 문제를 코드로 풀려고 하면 조금 까다롭다.. 차근 차근하면 할 수 있다.!&lt;/p&gt;
+&lt;h3&gt;1. 출발 지점에서 각 노드까지 한번에 갈 수 있는 경로의 최소 비용을 적어둘 배열을 준비한다.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;노드 수만큼 배열을 만들고, 출발 지점(A)에서 각 노드(A,B,C,D)까지 한번에 갈수 있는 경로의 최소 비용을 넣는다. 출발 지점에서 한번에 갈 수 없는 곳(A → C)은 NOT 처리 한다. (NOT은 가장 큰 수라고 생각하면 된다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;A&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;B&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;C&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;0&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;50&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;NOT&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;2. 경유지 노드를 선택한다.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;출발 지점에서 도착 지점에 가기 전 거쳐 갈 경유지 노드를 선택해야 한다.&lt;/li&gt;
+&lt;li&gt;출발 지점인 A를 제외하고 B, C, D 중에 골라야 하며 최소 비용으로 갈 수 있는 곳을 고른다.&lt;/li&gt;
+&lt;li&gt;위 배열에서 D가 20이기 때문에 처음 경유지로 선택되는 노드는 D이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;3. 출발 지점에서 도착 지점으로 바로 가는 경우와 출발 지점에서 경유지를 거쳐 도착지점을 가는 경우를 비교한다.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;위 배열을 순회하면서 출발점에서 해당 노드까지 바로 가는 것이 저렴한지 출발점에서 해당 노드까지 경유지를 거쳐 가는 것이 저렴한지 비교해서 &lt;mark&gt;더 저렴한 값&lt;/mark&gt;으로 배열 값을 변경한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;A&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;B&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;C&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;0&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;35&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;45&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt; : 출발 지점이므로 비용은 언제나 0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt; : A → B &lt;strong&gt;VS&lt;/strong&gt; A → D → B &lt;br /&gt; = 50 &lt;strong&gt;VS&lt;/strong&gt; 20 + 10 = 30&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C&lt;/strong&gt; : A → C &lt;strong&gt;VS&lt;/strong&gt; A → D → C &lt;br /&gt; = NOT &lt;strong&gt;VS&lt;/strong&gt; 20 + 25 = 45&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;D&lt;/strong&gt; : A → D &lt;strong&gt;VS&lt;/strong&gt; A → D → D &lt;br /&gt; = 20 &lt;strong&gt;VS&lt;/strong&gt; 20 + 0 = 20&lt;/p&gt;
+&lt;h3&gt;4. 출발 지점을 제외하고 모든 노드가 한번씩 경유지로 선택될 수 있도록 위에 과정을 반복한다.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A는 출발 지점이고, D는 경유지로 선택된 적이 있었으므로 B, C 중에서 비용이 더 저렴한 &lt;strong&gt;B를 다음 경유지로 선택한다.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;A&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;B&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;C&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;0&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;30&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;35&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt; : 출발 지점이므로 비용은 언제나 0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt; : A → B &lt;strong&gt;VS&lt;/strong&gt; A → B → B &lt;br /&gt; = 30 &lt;strong&gt;VS&lt;/strong&gt; 30 + 0 = 30&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C&lt;/strong&gt; : A → C &lt;strong&gt;VS&lt;/strong&gt; A → B → C &lt;br /&gt; = 45 &lt;strong&gt;VS&lt;/strong&gt; 30 + 5 = 35&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;D&lt;/strong&gt; : A → D &lt;strong&gt;VS&lt;/strong&gt; A → B → D &lt;br /&gt; = 20 &lt;strong&gt;VS&lt;/strong&gt; 30 + NOT = 20&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;마지막 경유지 C 선택&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;A&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;B&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;C&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;0&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;30&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;35&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt; : 출발 지점이므로 비용은 언제나 0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt; : A → B &lt;strong&gt;VS&lt;/strong&gt; A → C → B &lt;br /&gt;= 30 &lt;strong&gt;VS&lt;/strong&gt; 35 + NOT = 30&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C&lt;/strong&gt; : A → C &lt;strong&gt;VS&lt;/strong&gt; A → C → C &lt;br /&gt; = 35 &lt;strong&gt;VS&lt;/strong&gt; 35 + 0 = 35&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;D&lt;/strong&gt; : A → D &lt;strong&gt;VS&lt;/strong&gt; A → C → D &lt;br /&gt;= 20 &lt;strong&gt;VS&lt;/strong&gt; 35 + NOT = 20&lt;/p&gt;
+&lt;h3&gt;5. 결과&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;A&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;B&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;C&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;0&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;30&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;35&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;다음 결과는 출발 지점 A에서 각 노드까지 이동하는데 필요한 최소비용을 의미한다.&lt;/li&gt;
+&lt;li&gt;따라서 A → C까지의 최소비용은 35라는 것을 알 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;2021 KAKAO BLIND RECUITMENT&lt;br /&gt;합승 택시 요금 문제 풀이&lt;/h2&gt;
+&lt;h3&gt;설계&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;모든 노드를 출발 지점으로 해서 최소 비용 배열을 만든다. → 위 기본 예제 참고!&lt;/p&gt;
+&lt;p&gt;ex) 1번 노드가 출발점인 경우 2, 3, 4, …로 갈 수 있는 최소 비용, 2번 노드가 출발점인 경우 1, 3, 4, …로 갈 수 있는 최소 비용 …&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;1번까지 동승한 경우, 2번까지 동승한 경우, 3번까지 동승한 경우 … 최소 비용을 구한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;동승하지 않은 경우 최소 비용을 구한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;가장 최솟값이 답!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;코드&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;n&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; s&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; fares&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Number&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;MAX_SAFE_INTEGER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; faresBoard &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Number&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;MAX_SAFE_INTEGER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  fares&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;fare&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    faresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;fare&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;fare&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fare&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    faresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;fare&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;fare&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fare&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// 다익스트라&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// n개의 최소비용 배열 만들기&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; minFaresBoard &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;_&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; startPoint&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;_&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; faresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;startPoint&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// 경유지 찾는 함수&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;findStopover&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;startPoint&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; via&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; minValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Number&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;MAX_SAFE_INTEGER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; minIndex &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    minFaresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;startPoint&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;value&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;via&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; value &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; minValue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        minValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        minIndex &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; index&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; minIndex&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; startPoint &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; startPoint &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; startPoint&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; via &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    via&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;startPoint&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// n번 째 최소비용 배열 업데이트&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; stopover &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;findStopover&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;startPoint&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; via&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      via&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;stopover&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+      &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; j &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; j &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; j&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// 출발지와 도착지가 같은 경우&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;startPoint &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; j&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          minFaresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;startPoint&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;// 출발지 -&gt; 경유지 -&gt; 도착지&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; path1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Math&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+          minFaresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;startPoint&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;stopover&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; faresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;stopover&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          Number&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;MAX_SAFE_INTEGER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;// 출발지 -&gt; 도착지&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; path2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; minFaresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;startPoint&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        minFaresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;startPoint&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Math&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; path2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// 동승 경우의 수&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; aPerson &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; minFaresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; bPerson &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; minFaresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;b &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; share &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; minFaresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;s &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Math&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;answer&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; aPerson &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; bPerson &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; share&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// 동승하지 않는 경우의 수&lt;/span&gt;
+  answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Math&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;answer&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; minFaresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;s &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; minFaresBoard&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;s &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;b &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; answer&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;민코딩&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[React] react-virtualized를 활용해서 무한 스크롤 최적화하기]]></title><description><![CDATA[회사에서 커뮤니티 서비스를 개발하던 중 무한 스크롤에 virtual scrolling…]]></description><link>https://beanba.site/react-virtualized/</link><guid isPermaLink="false">https://beanba.site/react-virtualized/</guid><pubDate>Wed, 09 Mar 2022 07:29:00 GMT</pubDate><content:encoded>&lt;p&gt;회사에서 커뮤니티 서비스를 개발하던 중 무한 스크롤에 virtual scrolling 기능을 적용해야 할 순간을 마주했다.
+커뮤니티 서비스는 모바일 웹으로 제공되고 있었는데 무한 스크롤을 사용해서 데이터를 계속 불러오다 보면 모바일 화면에 백화현상이 일어났다. 😮&lt;/p&gt;
+&lt;h2&gt;리액트 공식 문서 살펴보기&lt;/h2&gt;
+&lt;p&gt;리액트 공식 문서에도 관련된 내용이 있었다. &lt;br /&gt;
+→ &lt;a href=&quot;https://reactjs.org/docs/optimizing-performance.html#virtualize-long-lists&quot;&gt;Virtualize Long Lists&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;100개 또는 1000개 이상의 데이터를 가지는 긴 리스트에서는 “windowing” 기술을 추천한다는 내용이다. “windowing” 기술을 사용하면 컴포넌트의 re-render 시간과 DOM 노드 생성을 효과적으로 줄일 수 있다고 한다.&lt;/p&gt;
+&lt;p&gt;windowing 라이브러리 중 &lt;strong&gt;react-window&lt;/strong&gt;와 &lt;strong&gt;react-virtualized&lt;/strong&gt; 라이브러리가 유명하다는 정보도 얻을 수 있었다.&lt;/p&gt;
+&lt;h2&gt;react-window VS react-virtualized&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;react-window&lt;/strong&gt;와 &lt;strong&gt;react-virtualized&lt;/strong&gt; 중 무엇을 써야 할까&lt;br/&gt;
+우선, react-window의 build size가 react-virtualized build size 보다 15배가 작다. 따라서 가능하다면 react-window를 사용하는 것이 좋다. 하지만 react-window는 react-virtualized의 기능 중 일부만을 제공한다.
+특히 react-window는 list를 구성하는 item들의 size(width, height)를 고정해야 하는데 react-virtualized의 경우 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;CellMeasurer /&amp;gt;&lt;/code&gt;라는 컴포넌트를 제공해서 Dynamic item sizing 기능을 제공한다.&lt;/p&gt;
+&lt;p&gt;커뮤니티 서비스에서 list item들의 size는 item 내용에 따라 달랐기 때문에 size 고정이 불가능했다. 따라서 react-virtualized를 사용하기로 결정했다.&lt;/p&gt;
+&lt;h2&gt;windowing &lt;br /&gt; (aka virtualizing)&lt;/h2&gt;
+&lt;p&gt;windowing 기법은 화면에 보이는 list의 item만 DOM에 만들기 때문에 무한 스크롤을 적용한 리스트처럼 긴 리스트의 성능을 효과적으로 향상시킨다.
+실제로 react-virtualized를 적용한 후 개발자 도구를 통해 확인해 보면 이해하기가 쉽다.&lt;br /&gt;
+스크롤을 내려서 데이터를 계속해서 불러와도 DOM의 개수가 일정하게 유지되는 것을 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/b8cd158118dfa1ddd1b9cdf16d6e448f/react-virtualized-dom.gif&quot; alt=&quot;React Virtualized Dom Image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;DOM을 보면 list의 item들이 innerScrollContainer로 감싸져 있는 것을 알 수 있는데 스크롤을 내리면 innerScrollContainer의 height는 계속 커진다. 그래서 DOM에 있던 item이 사라져도 스크롤의 길이와 위치는 유지된다.&lt;/p&gt;
+&lt;p&gt;기존 리스트 구현에 react-virtualized 라이브러리를 적용한 후 모바일 웹에서 스크롤을 끝까지 내려도 백화현상이 일어나지 않았다!&lt;/p&gt;
+&lt;h2&gt;react-virtualized CellMeasurerCache를 활용해서 한번 더 최적화하기&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;CellMeasurer /&amp;gt;&lt;/code&gt; 컴포넌트를 사용하면 리스트를 두 번 렌더링 한다. (debugger로 확인해 볼 수 있다!)
+첫 번째 렌더링에서는 list item들의 size를 측정하고, 두 번째 렌더링에서는 측정한 사이즈를 기반으로 list item들을 렌더링한다.&lt;/p&gt;
+&lt;p&gt;렌더링이 두 번 되기 때문에 virtualizing 기능을 사용하면 item 렌더링 속도가 느리다는 단점이 있다. 따라서 &lt;strong&gt;CellMeasurerCache&lt;/strong&gt; 기능을 잘 활용해야 한다.&lt;/p&gt;
+&lt;p&gt;CellMeasurerCache는 첫 번째 렌더링 때 측정한 데이터를 저장한다. CellMeasurerCache에 key 값이 저장되어 있는 item 컴포넌트는 size 측정을 위해 두 번 렌더링 되지 않는다.&lt;/p&gt;
+&lt;p&gt;CellMeasurerCache는 Public Methods로 &lt;code class=&quot;language-text&quot;&gt;clear()&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;clearAll()&lt;/code&gt;을 가지고 있다. CellMeasurerCache 데이터를 지우는 기능을 적당한 시점에 잘 써주지 않으면 당황스러운 결과를 얻을 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;예 1) 모바일 기기가 가로모드에서 세로모드로 바뀔 때&lt;/strong&gt; &lt;br /&gt;
+가로모드에서 측정한 데이터가 세로모드에서 그대로 적용되어서 list의 UI가 깨진다. 따라서 resize 이벤트가 발생했을 때 CellMeasurerCache를 clear 해주었다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;예 2) 리스트에 필터 기능이 있다면, 필터 조건을 변경했을 때 (최신순, 인기순 정렬 등)&lt;/strong&gt; &lt;br /&gt;
+필터 조건을 변경해서 list의 item들이 달라졌는데 CellMeasurerCache 데이터는 그대로이기 때문에 list의 특정 item UI가 깨질 수 있다. 그렇다고 유저가 필터 조건을 변경할 때마다 CellMeasurerCache를 clear해버리면 유저는 매번 느린 렌더링 속도를 경험해야한다. 이것을 해결하기위해 &lt;strong&gt;cellMeasurerCacheMap&lt;/strong&gt;을 만들어서 사용했다.부모 컴포넌트에서 cellMeasurerCacheMap의 key를 prop으로 전달 받았다. 그리고 list가 cellMeasurerCacheMap에서 key에 맞는 cache 데이터를 가져와서 사용할 수 있도록 하였다.&lt;/p&gt;
+&lt;p&gt;아래 코드는 cellMeasurerCacheMap의 쉬운 이해를 위해 간단하게 표현한 코드이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;typescript&quot;&gt;&lt;pre class=&quot;language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;인기순&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;height&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;px&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; item size&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; item size&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;최신순&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;height&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;px&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; item size&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; item size&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;실제 코드는 다음과 같이 작성하였다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;typescript&quot;&gt;&lt;pre class=&quot;language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; cellMeasurerCacheMap &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;selectCellMeasurerCache&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cellMeasurerCacheKey&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;cellMeasurerCacheMap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;has&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cellMeasurerCacheKey&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    cellMeasurerCacheMap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+      cellMeasurerCacheKey&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;CellMeasurerCache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; defaultHeight&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; minHeight&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; fixedWidth&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; cellMeasurerCacheMap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cellMeasurerCacheKey&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; cellMeasurerCache &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useMemo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;selectCellMeasurerCache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cellMeasurerCacheKey&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cellMeasurerCacheKey&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;마치며&lt;/h2&gt;
+&lt;p&gt;무한 스크롤에 데이터가 수 백 개 이상일 때를 다뤄본 적은 없어서 그동안 성능 최적화에 대해서 고민해 본 적이 없었다. 하지만 모바일 웹에서 성능 최적화는 선택이 아닌 필수였다. 성능 최적화가 되지 않으면 백화현상처럼 서비스가 아예 마비되버리는 현상이 자주 발생했기 때문이다.
+그렇다고 모든 list에 virtualizing 기능을 무조건 적용해야 하는 것은 아니다. virtualizing 기능을 적용한 list는 스크롤을 내려서 처음 렌더링 하는 item을 만나면 두 번 렌더링하는 것을 피할 수 없기 때문에 느리다. 하지만 virtualizing 기능을 적용하지 않은 리스트는 최초에 전체 item을 렌더링 하는데 시간이 걸릴 수는 있지만 이후에는 유저가 기다리는 시간이 없어진다. 한 번에 DOM에 그려도 문제없는 양의 item을 가지는 list에는 굳이 virtualizing 기능을 적용하지 않아도 된다고 생각한다.&lt;/p&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;[블로그] &lt;a href=&quot;https://blog.logrocket.com/windowing-wars-react-virtualized-vs-react-window/&quot;&gt;Windowing wars: React-virtualized vs. react-window&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[공식 문서] &lt;a href=&quot;https://github.com/bvaughn/react-virtualized/blob/master/docs/CellMeasurer.md&quot;&gt;react-virtualized CellMeasurer&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[SEO] Gatsby + Netlify 블로그 SEO 작업하기]]></title><description><![CDATA[휑하던 블로그에 몇 개 글을 올리고 나니 이제 구글에서 내 블로그가 검색되면 좋겠다는 생각이 들었다.
+그래서 Gatsby 블로그 SEO 작업을 시작했다. 🚀 1. 내 사이트가 Google에서 검색되는지 확인하기 당연히 안됨..😂…]]></description><link>https://beanba.site/gatsby-netlify-seo/</link><guid isPermaLink="false">https://beanba.site/gatsby-netlify-seo/</guid><pubDate>Mon, 04 Oct 2021 14:16:00 GMT</pubDate><content:encoded>&lt;p&gt;휑하던 블로그에 몇 개 글을 올리고 나니 이제 구글에서 내 블로그가 검색되면 좋겠다는 생각이 들었다.
+그래서 Gatsby 블로그 SEO 작업을 시작했다. 🚀&lt;/p&gt;
+&lt;h2&gt;1. 내 사이트가 Google에서 검색되는지 확인하기&lt;/h2&gt;
+&lt;p&gt;당연히 안됨..😂
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 870px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0137d958f2269df5aec01a60321cc508/f101e/before-seo.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.199999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcElEQVQoz32SAW6jMBBFe//TJdGuGtK0JG1TUgIY44CNsf1WdkKF2mq/NLIGe978GfEAoK4Tqq3Q2sBwpcv+0jw9Ip8zxH6Lyv5Ar+JTQgg45zHGoPXIMAa8D/Em3T3ER0NvaZsKpXpcr5D5nvbtQHvMEa8H5MsO20lcCHjnmKYpNTdaM+gxNbg1IwID3TBR9wGjewaj0dbiCBhrGSeH9YF+0AkUXQTv0xllrcXf87vDwDTFC/AeggfvYDQ+Rbg1/1VpbGPu8MXIl1KyWR/Jtiey7TvP+0/ejh3HQ4fqDM5NyUmMcRzTGYujM+fcl9uoBLxeFafTO0Vxoig+KMtPhGiQUlDXFXVdf0VVVQghEmyp2WUCStlxuVQ0TQQ096gRok0RIfGbUuoHZI45vwG7Lu1jHiEufx5vWbRc/hKy1O23GQZ2uydWqzWbzYbVek2e51RV/aPge/5dCRidlGXJ+XymKAqK4pxWEN3+Ntr/wP8AOX4JngVwzC4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Before SEO&quot;
+        title=&quot;Before SEO&quot;
+        src=&quot;/static/0137d958f2269df5aec01a60321cc508/f101e/before-seo.png&quot;
+        srcset=&quot;/static/0137d958f2269df5aec01a60321cc508/0eb09/before-seo.png 500w,
+/static/0137d958f2269df5aec01a60321cc508/f101e/before-seo.png 870w&quot;
+        sizes=&quot;(max-width: 870px) 100vw, 870px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;2. 로봇 텍스트 파일과 사이트맵 파일을 준비한다.&lt;/h2&gt;
+&lt;p&gt;Gatsby SEO 관련 공식 문서(&lt;a href=&quot;https://www.gatsbyjs.com/docs/how-to/adding-common-features/seo/&quot;&gt;SEO with Gatsby&lt;/a&gt;)를 읽어보면 Gatsby pages는 서버 사이드 렌더링이기 때문에 페이지의 모든 내용을 Googlebot이나 다른 검색 엔진 봇이 사용 가능하다는 것을 알 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;참고)&lt;/strong&gt; 클라이언트 사이드 렌더링은 초기 html에는 컨텐츠가 없는 빈 껍데기 상태이지만, 서버 사이드 렌더링의 경우 서버에서 컨텐츠를 포함한 html을 미리 그려서 보내준다.&lt;/p&gt;
+&lt;p&gt;SEO를 위해서는 텍스트 파일 형식의 로봇 텍스트 파일(robots.txt)과 xml 형식의 사이트맵 파일(sitemap.xml)이 필요하다. Gatsby는 해당 파일들을 쉽게 만들 수 있도록 plugin을 제공한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;gatsby-config.js 파일 &lt;code class=&quot;language-text&quot;&gt;gatsby-plugin-robots-txt&lt;/code&gt; 설치 확인&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 크롤러에 대해 모든 URL을 오픈하도록 robots.txt 파일을 자동 생성해 준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;User-agent: *
+Allow: /
+Sitemap: https://Mirabel.site/sitemap.xml
+Host: https://Mirabel.site&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;robots.txt 파일에서 특정 디렉토리는 검색이 되지 않도록 설정할 수도 있다. (Disallow 설정)&lt;/li&gt;
+&lt;li&gt;robots.txt 파일에서 sitemap 파일의 위치를 포함시켜준다.&lt;/li&gt;
+&lt;li&gt;gatsby build 진행 후, public 디렉토리 안 robots.txt 파일이 생성되었는지 확인한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;gatsby-config.js 파일 &lt;code class=&quot;language-text&quot;&gt;gatsby-plugin-sitemap&lt;/code&gt; 설치 확인&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;크롤링 이정표 역할을 하는 sitemap.xml 파일을 자동 생성해 준다.&lt;/li&gt;
+&lt;li&gt;사이트맵은 검색 엔진에 URL을 추가 혹은 배체하는 규약으로서 로봇 텍스트 파일을 보완하는 역할을 한다.&lt;/li&gt;
+&lt;li&gt;따라서 사이트맵 파일은 필수는 아니기 때문에 사이트맵이 필요한 경우는 &lt;a href=&quot;https://developers.google.com/search/docs/advanced/sitemaps/overview?hl=ko&quot;&gt;여기&lt;/a&gt;를 참고해보면 좋을 것 같다.&lt;/li&gt;
+&lt;li&gt;gatsby build 진행 후, public 디렉토리 안 sitemap.xml 파일이 생성되었는지 확인하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. 도메인 구매하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://beanba.site&quot;&gt;beanba.site&lt;/a&gt; (저는 가비아에서 할인하는 것으로 구매하였습니다.)&lt;/li&gt;
+&lt;li&gt;Netlify에 구매한 도메인을 설정하고, DNS 정보를 확인한다.&lt;/li&gt;
+&lt;li&gt;가비아에 Netlify에서 확인한 DNS configuration 등록한다. (&lt;a href=&quot;https://customer.gabia.com/manual/dns/3041/3040&quot;&gt;DNS 레코드 설정 방법 가이드&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;4. Google Search Console 등록하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Google Search Console에 도메인을 등록한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Google Search Console Sitemaps에 준비한 로봇 텍스트 파일과 사이트맵 파일을 추가한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;제출하고 처음에는 빨간 글씨로 실패..! 에러..! 이런 문구가 떠 있었는데 2~3일 정도 기다리니까 성공으로 바뀌어 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1243px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d0b935ccd00cf8faab0a260d5ded7dfc/2c0f3/google-search-console.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABFElEQVQoz41R2XLDMAj0//9mGmfi1LFOC4Sk7YDjtC+dlpkdEMdyaFqfT8QYwczgWpFjxDpfsW9PcPBg7/6P4DEp2b7vqLWCRSB+A7sNj/mK9FwxmDCo/InOhPa5HIQhhIOwCnhbrVuJATUntLKj7fl3vOLZO9B9xpRSspWJCMwVtRSk9QF3v5mWFCDxhRSPd4popx3DYccACg7TfLvhcvmA994mLUTIpSDmjCoNpwwArQ/TfQDSu9kqbYw3JiU5pmOUUt5a78pEaCIYY5hffRrLOVtN1Zs3sRyiw2+ECvtlZrulBrZtMyiJykl06tYaZDTUfmxBzHDOYdJVl2X5/mlmiAh67wYt/An1ndOe+WpbAxF8Ae0fbftxldy6AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Google Search Console&quot;
+        title=&quot;Google Search Console&quot;
+        src=&quot;/static/d0b935ccd00cf8faab0a260d5ded7dfc/2c0f3/google-search-console.png&quot;
+        srcset=&quot;/static/d0b935ccd00cf8faab0a260d5ded7dfc/0eb09/google-search-console.png 500w,
+/static/d0b935ccd00cf8faab0a260d5ded7dfc/1263b/google-search-console.png 1000w,
+/static/d0b935ccd00cf8faab0a260d5ded7dfc/2c0f3/google-search-console.png 1243w&quot;
+        sizes=&quot;(max-width: 1243px) 100vw, 1243px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;5. 구글 검색 확인&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;구글에서 검색해 보니 블로그에 올렸던 글이 검색되는 것으 확인할 수 있었다!!!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 728px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4683ede606f6b90bdb9b3cb0a0326abb/0b3a5/after-seo.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 95.60000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC2klEQVQ4y5WUi47jJhSG8/4vU6nqY1RVp9JoJrvZXBzHV2ywjcHgy1dBJp1st1VVpM/HYPH78MNhZxcQmaRI92ilQQnE/pXk7ZXsyzs6OYEoWYFtW9m2LTLPM9ZapJT0/UhvFuZlZbcBs5/RxmEnj5cN9npmKm7YPMXdEpyomNeVaZqi0LquLMsSCf0QJ+fj+A42CuXpzIrWA9ZO6GHATxNGa5y1GGvjxHE0MRKzvWf6aJNzsb8Lj7rt6Psea0a89/zf9hD+SzDNG45JxeFcUNcNVVXTNC1SKpqmQQgRY1mWlGVFLQRVVdG2kq7rvxPerevGL787fv7N8dOvDjFE+78jePNPBIEwP9jg5/kuGCYoOSMqh2o9svW0jUfUjuvFxPH/WmbY7cCHIBwOV15e9ry/ndi/H3l/O1KWkuzWUhYtwzDQdV08IlKpOPlZ9LntwlhdlxRFhhAVrWyQqkV1knHssdYwjiNa6ygccM79kOWDuCnJWXG9KC4nSVlovn1VpNeey0kzDsu/LvmZYN0WMwSyUnLLG65Zw+F0Y3+4cr4WnJOKvGoQSlGKJtKoDqG6GB/4ZX06Nm5iqjN0kWLrHFNmjMUtxlU1MCi2Tv5I/3hv2fT96NwzbCqatz318UJzvGDqEisqdJmz9R0YDePwiXnEj3E7QpawLfPHpkjB7TUluyjSg0B1mtFOEW0MwxgY731r43sY67WO33tj8WUGy/yRoRQkxwNJUZAWBZf0xilJSfMiepaVwUeBcQ7r/P1nUxCfMJNDO89c5Z+CSMGUnhmLDFeXTFXOcLviRRn9ow/IJ9QTEoYO8ivbsnwseZ5p0xsiSWjTlD4v6fICrxRLF7waPz37O8E/3bNZ87TLwLdjF9nvW17+KPl6aNh/aXh7b6JfU7hMnY/LDAzGxKWH6Nenw32vlA3vHcvicW6Kd6IxI+N4j0qpWCmBcMWFSgkxVE4ox8d196iUPwHuUrlQ3iH/twAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;After SEO&quot;
+        title=&quot;After SEO&quot;
+        src=&quot;/static/4683ede606f6b90bdb9b3cb0a0326abb/0b3a5/after-seo.png&quot;
+        srcset=&quot;/static/4683ede606f6b90bdb9b3cb0a0326abb/0eb09/after-seo.png 500w,
+/static/4683ede606f6b90bdb9b3cb0a0326abb/0b3a5/after-seo.png 728w&quot;
+        sizes=&quot;(max-width: 728px) 100vw, 728px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;마치며&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;지금은 &lt;code class=&quot;language-text&quot;&gt;site:&lt;/code&gt; 키워드로 검색해야 나오지만 포스트 내용 키워드로 검색해도 검색 결과 상위에 나올 수 있도록 열심히 해야겠다. 💪&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.com/docs/how-to/adding-common-features/seo/&quot;&gt;SEO with Gatsby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[React] 무한 스크롤 만들기 (React with GraphQL Pagination)]]></title><description><![CDATA[이 포스트에서는 프론트엔드 관련 코드만을 다룹니다. 
+Relay’s Cursor Based Connection Pattern으로 pagination을 구현합니다. 데이터 가져오기 GraphQL query 작성 서버에서 pagination…]]></description><link>https://beanba.site/infinite-scroll/</link><guid isPermaLink="false">https://beanba.site/infinite-scroll/</guid><pubDate>Mon, 27 Sep 2021 07:33:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;이 포스트에서는 프론트엔드 관련 코드만을 다룹니다.&lt;/em&gt; &lt;br/&gt;
+&lt;em&gt;&lt;strong&gt;Relay’s Cursor Based Connection Pattern&lt;/strong&gt;으로 pagination을 구현합니다.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;데이터 가져오기&lt;/h2&gt;
+&lt;h3&gt;GraphQL query 작성&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;서버에서 pagination 데이터를 가져오기 위한 query를 작성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; graphql &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gql&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;
+  query PaginationUserBookmarksOnFeed($first: Int, $after: PaginationCursor) {
+    paginationUserBookmarks(first: $first, after: $after) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      edges {
+        cursor
+        node {
+          id
+          interest {
+            id
+            interest
+          }
+          tags {
+            id
+            tag
+          }
+         ...
+        }
+      }
+    }
+  }
+&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;GraphQL query 실행&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;위에서 작성한 쿼리를 functional component안에서 Apollo-Client가 만들어준 &lt;code class=&quot;language-text&quot;&gt;use[PaginationUserBookmarksOnFeed]Query()&lt;/code&gt; hook으로 실행시킨다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  data&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; feedData&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  loading&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; isFeedDataLoading&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  fetchMore&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;usePaginationUserBookmarksOnFeedQuery&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  variables&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    first&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;first&lt;/code&gt; 는 한번의 요청에 가져올 데이터 갯수를 의미한다.&lt;/li&gt;
+&lt;li&gt;참고) &lt;code class=&quot;language-text&quot;&gt;notifyOnNetworkStatusChange&lt;/code&gt; 속성을 true로 설정하고 networkStatus 값을 받으면 데이터를 가져오는 동안 로딩 처리를 할 수 있다. ex. spinner&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;fetchMore&lt;a href=&quot;&quot;&gt;FeedData&lt;/a&gt; 코드 작성&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pageInfo에 hasNextPage 값이 true라면 pageInfo.endCursor 다음 데이터 4개를 가져오도록 함수를 작성한다.&lt;/li&gt;
+&lt;li&gt;hasNextPage 값이 false일 경우 다음 데이터가 없다는 것을 의미하므로 fetchMore() 함수를 실행시키지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;fetchMoreFeedData&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pageInfo&lt;span class=&quot;token operator&quot;&gt;?.&lt;/span&gt;hasNextPage&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;fetchMore&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      variables&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; first&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; after&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; pageInfo&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;endCursor &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Apollo Client cache typePolicies 설정&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;typePolicies 설정에 아래 코드와 같이 위에서 작성한 query 이름에 &lt;code class=&quot;language-text&quot;&gt;relayStylePagination()&lt;/code&gt; 함수를 넣어준다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ApolloClient&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  link&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; authLink&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;httpLink&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  cache&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;InMemoryCache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    typePolicies&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      Query&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        fields&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          paginationUserBookmarks&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;relayStylePagination&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;typePolices 설정은 GraphQL 스키마에 대한 연속 호출 데이터가 기존 캐시와 병합되고 저장되는 방법을 정의하는 곳이다.&lt;/p&gt;
+&lt;p&gt;ex)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;호출 1&lt;/strong&gt;: 데이터 0번에서 9번까지 가져오기&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;호출 2&lt;/strong&gt;: 데이터 10번에서 19번까지 가져오기&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;호출 1번을 통해 가져온 데이터와 호출 2번을 통해 가져온 데이터를 어떻게 병합해서 캐시에 저장할 것인지를 정의한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;relayStylePagination()&lt;/code&gt; 함수는 &lt;strong&gt;Cursor-based pagination&lt;/strong&gt;에 맞게 간편하게 사용할 수 있도록 미리 정의된 라이브러리이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Intersection Observer API 적용하기&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document’s viewport.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Intersection Observer 생성하기&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; IntersectionObserverInit &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  threshold&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; intersectionObserver &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IntersectionObserver&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;handleIntersection&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; options&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;options에 root 설정을 하지 않으면 브라우저 뷰포트가 기본값이 된다.&lt;/li&gt;
+&lt;li&gt;threshold 0.5 설정을 하면 뷰포트에 target이 50% 교차되면 callback(handleIntersection) 함수가 동작하게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Target 설정하기&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;cursor === pageInfo?.endCursor&lt;/code&gt; 인 경우(서버에서 가져온 마지막 데이터인 경우), ref 값을 target으로 설정해준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;HomeFeed&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; entries&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; pageInfo&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; fetchMoreFeedData &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useDataAccessFeed&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; target &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token generic-function&quot;&gt;&lt;span class=&quot;token function&quot;&gt;useRef&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;HTMLDivElement&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;...&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;entries&lt;span class=&quot;token operator&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; cursor&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+          &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;cursor &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; pageInfo&lt;span class=&quot;token operator&quot;&gt;?.&lt;/span&gt;endCursor &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; target &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;...&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ShadowCard&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Callback(&lt;code class=&quot;language-text&quot;&gt;handleIntersection&lt;/code&gt;) 작성하기&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;IntersectionObserverEntry.isIntersecting&lt;/code&gt; : true이면 뷰포트에 교차되는 변화가 일어나고 있다는 것을 의미하고, false이면 뷰포트에 교차되지 않는 변화가 일어나고 있다는 것을 의미한다.&lt;/li&gt;
+&lt;li&gt;따라서 &lt;code class=&quot;language-text&quot;&gt;entry.isIntersecting&lt;/code&gt; true일 경우 &lt;code class=&quot;language-text&quot;&gt;fetchMore[FeedData]()&lt;/code&gt; 함수를 실행시키고, 새로운 target을 observer에 등록한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;handleIntersection&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;entry&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; IntersectionObserverEntry&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  observer&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; IntersectionObserver&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;entry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isIntersecting&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;fetchMoreFeedData&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  observer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;unobserve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;entry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    observer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;observe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;최종 코드&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;HomeFeed&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; entries&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; pageInfo&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; fetchMoreFeedData &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useDataAccessFeed&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; target &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token generic-function&quot;&gt;&lt;span class=&quot;token function&quot;&gt;useRef&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;HTMLDivElement&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; IntersectionObserverInit &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      threshold&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;handleIntersection&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;entry&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; IntersectionObserverEntry&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; observer&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; IntersectionObserver&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;entry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isIntersecting&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+      &lt;span class=&quot;token function&quot;&gt;fetchMoreFeedData&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+      observer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;unobserve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;entry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        observer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;observe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; intersectionObserver &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IntersectionObserver&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;handleIntersection&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; options&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      intersectionObserver&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;observe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; intersectionObserver &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; intersectionObserver&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;disconnect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;fetchMoreFeedData&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;...&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;entries&lt;span class=&quot;token operator&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; cursor&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+          &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;cursor &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; pageInfo&lt;span class=&quot;token operator&quot;&gt;?.&lt;/span&gt;endCursor &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; target &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;...&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ShadowCard&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;주의할 점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;fetchMore 함수를 실행하면 다음 데이터가 불러와지는데, 이때 기존 cache 데이터에 제대로 병합이 되지 않는다면 이 &lt;a href=&quot;https://stackoverflow.com/questions/66415243/merge-previous-data-while-scrolling-on-relay-pagination-graphql&quot;&gt;링크&lt;/a&gt;를 읽어보는 것이 좋다.&lt;/li&gt;
+&lt;li&gt;Apollo는 쿼리 인수에 after가 포함되어 있으면 before 이전 페이지를 병합한다. 따라서 first, after, before, last가 어떤 객체의 속성이 아닌 인수로 선언되어야 한다.
+ex) &lt;code class=&quot;language-text&quot;&gt;paginationUserBookmarks(first: $first, after: $after)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;누군가 나 처럼 이 문제에 부딪혀 고통받지 않도록..😇&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;느낀 점&lt;/h2&gt;
+&lt;p&gt;무한 스크롤 기능은 여러 페이지에서 사용될 것 같아서 시간날 때 hook으로 분리하는 작업을 해야겠다…&lt;/p&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://levelup.gitconnected.com/infinite-scroll-in-react-with-graphql-pagination-40bfc2294430&quot;&gt;Infinite Scroll in React with GraphQL Pagination&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API&quot;&gt;Intersection Observer API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[tailwindcss] 통통 튀는 공모양 preloader 만들기]]></title><description><![CDATA[참고할만한 로딩 애니메이션을 찾아다니다가 다음과 같은 글을 보게 되었다. These days, if a website takes more than 4 seconds to load we tend to not even bother waiting; we…]]></description><link>https://beanba.site/bouncing-ball/</link><guid isPermaLink="false">https://beanba.site/bouncing-ball/</guid><pubDate>Wed, 22 Sep 2021 13:11:00 GMT</pubDate><content:encoded>&lt;p&gt;참고할만한 로딩 애니메이션을 찾아다니다가 다음과 같은 글을 보게 되었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;These days, if a website takes more than 4 seconds to load we tend to not even bother waiting; we simply close the page and find something else.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;사람들은 웹 페이지를 로드하는데 4초가 넘어가면 못 견디고 나가버린다는 내용이었다. 😮&lt;/p&gt;
+&lt;p&gt;코드 로직을 변경해서 데이터 로드 시간을 줄이는 게 가장 좋은 방법이지만 해결이 어렵다면 웹 페이지 내용이 로딩 중일 때 재미있는 preloader를 만들어서 사용자가 떠나버리지 않게 붙잡는 방법도 있다.&lt;/p&gt;
+&lt;p&gt;참고 사이트에서 통통 튀는 공모양 preloader를 발견했는데, 가장 심플하고 재미있어서 tailwindcss로 비슷하게 만들어보았다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;공 모양 만들기&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;w-4&lt;/code&gt; &lt;code class=&quot;language-text&quot;&gt;h-4&lt;/code&gt; &lt;code class=&quot;language-text&quot;&gt;rounded-full&lt;/code&gt; : 너비, 높이 16px의 원 모양을 만든다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;absolute w-4 h-4 rounded-full bg-yellow-400 animate-bigBounce&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt;통통 튀는 bounce 애니메이션 만들기&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;animate-bigBounce&lt;/code&gt; : bitBounce라는 커스텀 애니메이션을 만든다.&lt;/li&gt;
+&lt;li&gt;keyframes 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;0% :&lt;/strong&gt; 공이 바닥에 떨어졌을 때,&lt;/p&gt;
+&lt;div style=&quot;border:1px dashed;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 128px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/1a11c911a2354d824e946ecaa0559a89/82763/bouncing-ball-1.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 41.40625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAX0lEQVQoz+1PMQqAQAzrU3XzC77Apx24uPgPdRGrMRFuOkTvFkcDoYE2ITV9DPsDRTIy1SnvN+WGiekJLOwta8Im+iTui+izCM+Gvb4c57EKQyuEWugbIVTC2Iknsg0vCyd5IoI4zpYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;bouncing ball 1&quot; title=&quot;bouncing ball 1&quot; src=&quot;/static/1a11c911a2354d824e946ecaa0559a89/82763/bouncing-ball-1.png&quot; srcset=&quot;/static/1a11c911a2354d824e946ecaa0559a89/82763/bouncing-ball-1.png 128w&quot; sizes=&quot;(max-width: 128px) 100vw, 128px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;border-radius: 60px 60px 20px 20px;&lt;/code&gt; , &lt;code class=&quot;language-text&quot;&gt;transform: scaleX(2);&lt;/code&gt; &lt;code class=&quot;language-text&quot;&gt;height: 5px;&lt;/code&gt; css 속성을 적용해서 찌그러진 공모양을 만들어준다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;35%:&lt;/strong&gt; 공이 바닥에서 35% 정도 올라갈 때,&lt;/p&gt;
+&lt;div style=&quot;border:1px dashed;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 122px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/8ace920bf5baa25553a05ceb3288bc21/047b0/bouncing-ball-2.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 53.278688524590166%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYklEQVQoz2P4T2XAMGog7Qz89+8fnP739zcKn2QDcWkmxlDCLvz99f/f5/vANEUu/PfvL5j950Tq/1+LGcA0RO4v6S5EMfBw+P9fCxnANNkGwjSC6e+v//+9txhMI4vjMhAA4wJlCxJkp/kAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;bouncing ball 2&quot; title=&quot;bouncing ball 2&quot; src=&quot;/static/8ace920bf5baa25553a05ceb3288bc21/047b0/bouncing-ball-2.png&quot; srcset=&quot;/static/8ace920bf5baa25553a05ceb3288bc21/047b0/bouncing-ball-2.png 122w&quot; sizes=&quot;(max-width: 122px) 100vw, 122px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;border-radius: 50%;&lt;/code&gt; , &lt;code class=&quot;language-text&quot;&gt;transform: scaleX(1)&lt;/code&gt; css 속성을 이용해서 동그란 공모양을 만들어준다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;100%:&lt;/strong&gt; 공이 바닥에서 100% 높이로 올라갈 때, &lt;code class=&quot;language-text&quot;&gt;top: 0&lt;/code&gt; 으로 공 위치를 잡아준다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt; &lt;span class=&quot;token comment&quot;&gt;// tailwind.config.js&lt;/span&gt;
+
+theme&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	extend&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		...&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		animation&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        bigBounce&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;bigBounce 500ms alternate infinite ease&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		keyframes&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        bigBounce&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &apos;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;%&apos;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            top&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;30px&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            height&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;5px&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            borderRadius&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;60px 60px 20px 20px&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            transform&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;scaleX(&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;)&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &apos;&lt;span class=&quot;token number&quot;&gt;35&lt;/span&gt;%&apos;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            height&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;16px&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            borderRadius&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;&lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;%&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            transform&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;scaleX(&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;)&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &apos;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;%&apos;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            top&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;완성 ✨&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/fb9cb4e5efa6d6282b00db654811352f/bouncing-ball-loading.gif&quot; alt=&quot;Bouncing Ball&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;relative h-20 py-5&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;absolute w-4 h-4 rounded-full bg-yellow-400 animate-bigBounce&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text-yellow-400 text-lg font-light align-text-top ml-8 tracking-widest&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    NOW LOADING
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.muz.li/top-30-most-captivating-preloaders-for-your-website-95ed1beff99d&quot;&gt;top-30-most-captivating-preloaders-for-your-website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[React] react-hook-form 사용법]]></title><description><![CDATA[react-hook-form을 사용해서 사용자 입력 데이터를 서버로 전송하는 기능을 구현해보았다. 설치 Form 영역  사용자가 입력하는 form 영역은 다음 사진에서 표시한 부분이다.
+Readable이라는 interest를 선택하고, tag…]]></description><link>https://beanba.site/react-hook-form/</link><guid isPermaLink="false">https://beanba.site/react-hook-form/</guid><pubDate>Wed, 22 Sep 2021 13:11:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;react-hook-form&lt;/strong&gt;을 사용해서 사용자 입력 데이터를 서버로 전송하는 기능을 구현해보았다.&lt;/p&gt;
+&lt;h2&gt;설치&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;yarn add react&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;hook&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;form&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Form 영역&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 336px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fb5bf2810e5abfc897336d5a853babe4/3fee3/readable-extensions-form.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 147.61904761904762%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGhUlEQVRIx42UC1BU5xXHL8T6aHcRH4iPpCaIQnwUlwWkMgpqI8QqohIVxChJUanxlVidDLZWi85UjbWmmmZs1Gk0k3Q6QQc1ptZU3o/lzS77AEUI4Q0uLPfue3+dvTRJa5LGM/Ofc77vu9//O+f8z1zBUFJCaVU1edoG8mvrKCgq4h/3yqhoMKFvNtF2swLdB6XcfXifaksvLSX1lN9vRWfQIHXdpcNcxMef13DmTjl5lY0IdTk5FLyZRUHWIe6cOEnp/jf4276jbH/tXS68dZS3f/sRp//4Ief1NZQUlNJw8ALF56+hNb1DUe0R9nz6HplXb3PjYj4ll3IQNMeOkpewjLzUzdxK3sDtA/s5u/Uof/r1O5w+dYId23/P8ewTHP/nJ+QePkvOG6e4du4iB/91mcPXb/LB9TI0lz6l8dxb6G+eQ7h18RrHd/6B7EPXOXPqMm+/e57s9CyCFAFMnDKZyYETUSqUKMf6M045Fn+FEv/ASby8/yS3r96i9O8fUvzReT775BCF5X9B+NWuSwT4prN322lOnzlL9omTvLJzB4Ig/F8c2biF3IxMriSs4K9Z2/nF6dc5dvUKwvvv5ZIYd4CsN4+w/8Dr7Nq9h5fTNsuXlEol48ePx8/Pj8DAQEaNGsWY0aPxHfkD9iUkcOGZYI6N8udg8Fw2vnaYc39+H2H7jmz27d3N3t172JaRQXJ6Oi8kJcmEkZGRbNiwgTVr1hAREUFcXBxRERGMVijJiIlh97SnyRzzI36ZsJKsjJ0ciN+LkJS0hqT1a1ib+ipJKZuYGB/PrCVLZMLZs2ezYsUK1q1bJ2eZmJiIWq2Wz+KWLCc2NpnkRfHMW5zKogXrSA9OQYhflUJQ7EpCY18gbeNyFqxKYn5MjHxpytSphISEEBQUREBAgFy2Uuknn82cpSY0fBXRcWt5PiyB0DmxvBi9FSFicRrzF8zg50vHErMgmOh5KuaGzkbw8flOQXx9fXguYDqqmWpiopcQHaJi2ZxQFv3sVYSfqJJYvzaOV7asZtOqF1k8L5Qf+yu+V+Up02cyZmo4kwJmMnlCMP5PP48qKgXhueClJK5eybbNm3kpOZaFyxfz7Nw5hDz7DEHTpxMSHMycOXPxGzeekf5KFAoFCoVSLn/ihACm/VDJuMAZTJk2leBZyxEmTIpg4cJItqamEv1TNUuXLSRl00tsTF7N5rRNbElLY1dmJtNnzEAYITBq5Eh5fHx8fBgx4ik526d8fWWvGB+GEB61nsjIMNSqcFQqFeqoKFSqMFRhYYSr1ajVKqLU4aijIlFHRMjj4x0nr9re2OvD1V4/j/nqZITyylbAg8vpxO1yyZDN4+FxczocOOz2YTi+9jabXebQVLYi4LZS2Q4VTYNY7SJdfY+orKnl8/YOGkyNaA0GtAYjOqOR7zOb3YZgswzQ2drPF40t2DtaMbc8oE1Xx6Pm+7Q31NNp0NHeoKVdr8XV24WnvwdPXw+e/t7huL8Hd18PmPsYGjAjWBtqoUEDXzyAZgO0Ng3jgX4Y3r2HRmgxgakez5do0uExaeWY+3rQVyNWFiPY9bU4LYO09vbT1t1DS0cX9v+U4HkM32WSZ7jnYnXpMKGju5MHzQ9pMploNJmQxCFZHK8IrieAJFlxixbEqpJhQgYf/a+aTicOr6JPCpcLjyQOE7qbdDysq6Otq5uOzk66e/u+peAnMIcdsaoYwdmoxdzWjs0Ng0MORMn2Fd2X5h1Jj8eD2+3G7fY8Bjdu70d263APHUYd9OoZ7CnB9qgat8uGw+nBNmDC3JGP1F+N02HD4XA+Rur+Gt7X7TbEmjIEl1GPxXiFghs7aCz7DTZrN6Id+h5cJv96BvcrfodV6sMiOb6R+TdK1hQi2Bv1UF0ITRowlIOhDgy1YKwCUykYNcN7pnpchnrZy2jUgqkOj7EOl1EL2krEOg2C3eGQ00WygtULEWwS2LyxHY8ogmTBah6ipXkIXe0j9PVmtNX9aKv6MOrMNBkH6e+WsIpDCHa7A4tkxyJZGRiSMA9J9A8M0We2MDAkflWitw2NbXAnTyQnd4CcG4N8nDvA3QKJWpObHos3HwnB6bThcnn/Gja5+d61ZLUiila8j/230hZv4k6wu8HuAocbrA4YFOVikCQRoaK6l8/yu7lX2E1BSQ/3Cnup1xrQ6bRoNBrKy8spLi6mrKyMmpoqKisryM/Po7i4iMLCAnmt1+sYHBygq6uLfwPtPto2LM9/LwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Form Area Image&quot;
+        title=&quot;Form Area Image&quot;
+        src=&quot;/static/fb5bf2810e5abfc897336d5a853babe4/3fee3/readable-extensions-form.png&quot;
+        srcset=&quot;/static/fb5bf2810e5abfc897336d5a853babe4/3fee3/readable-extensions-form.png 336w&quot;
+        sizes=&quot;(max-width: 336px) 100vw, 336px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;사용자가 입력하는 form 영역은 다음 사진에서 표시한 부분이다.&lt;br /&gt;
+Readable이라는 interest를 선택하고, tag1, tag2, tag3 태그를 추가한 후, ‘Readable it’ 이라고 적힌 버튼을 클릭하면 서버로 데이터가 전송되어야 한다.&lt;/p&gt;
+&lt;h2&gt;useForm&lt;/h2&gt;
+&lt;p&gt;| useForm is custom hook for managing forms with ease.&lt;/p&gt;
+&lt;p&gt;우선, useForm 이라는 custom hook으로 default 값들을 지정해주었다.&lt;br /&gt;
+useForm의 return 값인 methods로 form 데이터를 관리할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FormValues&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  tags&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  interests&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  selectedInterest&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; methods &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token generic-function&quot;&gt;&lt;span class=&quot;token function&quot;&gt;useForm&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;FormValues&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  defaultValues&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    tags&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; userData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tags &lt;span class=&quot;token operator&quot;&gt;??&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    interests&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; userData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;interests &lt;span class=&quot;token operator&quot;&gt;??&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Readable&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    selectedInterest&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; userData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;selectedInterest &lt;span class=&quot;token operator&quot;&gt;??&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Readable&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;useForm으로 validation도 custom하게 설정할 수 있다. → &lt;a href=&quot;https://react-hook-form.com/api/useform/#main&quot;&gt;useForm 공식 문서&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;useFormContext&lt;/h2&gt;
+&lt;p&gt;Interest 입력 부분과 tag 입력 부분, 두 곳의 데이터를 전송해야하기 때문에 useFormContext를 사용했다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;FormProvider /&amp;gt;&lt;/code&gt; 에 useForm의 return 값인 methods를 넣어주고 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;Interests /&amp;gt;&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;&amp;lt;HashTagInput /&amp;gt;&lt;/code&gt; 컴포넌트를 감싸주면 Interests와 HashTagInput 컴포넌트에서 &lt;code class=&quot;language-text&quot;&gt;useFormContext()&lt;/code&gt; hook으로 form 데이터를 공유 할 수 있다.&lt;br /&gt;
+(React에서 사용하는 Context와 기능, 사용법이 같고, 부모 컴포넌트에서 자식 컴포넌트로 props를 통해서 데이터를 전달하지 않아도 된다는 장점이 있다.)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;FormProvider&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token spread&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;methods&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;col-start-1 row-start-3 space-y-3 px-4 pb-4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Interests&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;HashTagInput&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;FormProvider&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;useFieldArray&lt;/h2&gt;
+&lt;p&gt;| Custom hook for working with uncontrolled Field Arrays (dynamic inputs).&lt;/p&gt;
+&lt;p&gt;react-hook-form에서 지원하는 useFieldArray hook을 사용하면 input을 추가하고, 삭제하는 기능을 정말 편하게 구현 할 수 있다.&lt;/p&gt;
+&lt;p&gt;우선, useFormContext로 context의 methods를 가져온 다음, useFieldArray에 &lt;strong&gt;methods.control&lt;/strong&gt;과 &lt;strong&gt;control 하고 싶은 form 데이터의 name&lt;/strong&gt;을 넘겨주면 fields 데이터, append, remove 함수등을 사용할 수 있게 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; methods &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useFormContext&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; register&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; control &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; methods&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; fields&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; append&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; remove&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; insert &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useFieldArray&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;tags&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  control&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;fields에는 처음에 useForm을 통해 넣어준 default 값이 들어있다. 따라서 일단 fields 데이터를 화면에 뿌려준다. (태그 자체는 input이 아니기 때문에 input 태그를 hidden으로 넣어주었다.)&lt;/p&gt;
+&lt;p&gt;input 태그에 methods.register를 이용해서 등록을 해준다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;flex flex-wrap mb-4 text-sm font-medium max-h-32 overflow-y-auto&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;fields&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;field&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;field&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;flex mr-2 mb-1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Chip&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;backgroundColor&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;bg-yellow-200&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;fontColor&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text-black&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &amp;lt;input &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;tags.&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;.name&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt; className=&quot;hidden&quot; /&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;field&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Chip&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;ml-1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;BackspaceIcon&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;w-5 h-5 text-gray-300 hover:text-gray-500&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;BackspaceIcon&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;태그를 입력하고 Enter를 치면 태그가 추가 되게끔 구현하고 싶었기 때문에 태그 입력 핸들러는 다음과 같이 작성하였다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;handleTagAddButtonClick&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; inputTagValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tagInputRef&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;key &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Enter&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; inputTagValue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; inputTagValue &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Submit&lt;/h2&gt;
+&lt;p&gt;react-hook-form은 Enter 키를 입력하면 자동으로 submit 동작을 하게끔 구현되어있는 것 같았다.&lt;br /&gt;
+나는 Enter 키를 입력하면 태그를 추가하고 싶었을 뿐 submit 동작은 원하지 않았기 때문에
+input 태그의 type을 button으로 지정해준 뒤 onClick으로 submit 핸들러가 동작하게끔 구현하였다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Readable it 버튼&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;input&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;onSubmit&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;bg-indigo-100 text-indigo-700 text-base font-semibold px-6 py-2 rounded-lg ml-auto disabled:opacity-50&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;Readable it&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;useForm의 return 값인 methods.getValues를 사용해서 form 데이터를 가져올 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// submit 핸들러&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;onSubmit&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; tags&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; selectedInterest &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getValues&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;submitData&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; tags&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; interest&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; selectedInterest &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;주의할 점&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;FormProvider /&amp;gt;&lt;/code&gt; 에 감싸진 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;button /&amp;gt;&lt;/code&gt; 태그들은 꼭 잊지말고 &lt;strong&gt;type&lt;/strong&gt;을 지정해주어야한다.
+예를 들어 &lt;code class=&quot;language-text&quot;&gt;type=&amp;quot;button&amp;quot;&lt;/code&gt;이라고 지정해주지 않으면 엔터를 입력했을 때 제멋대로 submit 동작이 되는 문제가 생긴다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[leetcode 300문제 도전]]></title><link>https://beanba.site/leetcode/</link><guid isPermaLink="false">https://beanba.site/leetcode/</guid><pubDate>Mon, 21 Jun 2021 15:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Git] Stash]]></title><description><![CDATA[commit하기 껄끄러울 때 사용하는 stash Stash? 작업 파일들을 스택에 잠시 저장할 수 있도록 하는 것, stash 명령을 사용하면 워킹 디렉토리에서 수정한 파일들만 저장한다. Stash 원리  를 실행하면 스택에 새로운 Stash…]]></description><link>https://beanba.site/git-stash/</link><guid isPermaLink="false">https://beanba.site/git-stash/</guid><pubDate>Sat, 19 Jun 2021 11:07:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;commit하기 껄끄러울 때 사용하는 stash&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Stash?&lt;/h2&gt;
+&lt;p&gt;작업 파일들을 &lt;strong&gt;스택&lt;/strong&gt;에 잠시 저장할 수 있도록 하는 것, stash 명령을 사용하면 워킹 디렉토리에서 수정한 파일들만 저장한다.&lt;/p&gt;
+&lt;h2&gt;Stash 원리&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git stash&lt;/code&gt; 를 실행하면 스택에 새로운 Stash가 만들어진다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Stash 사용 방법&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;git stash&lt;/code&gt; : &lt;br /&gt;스택에 새로운 Stash가 만들어진다.&lt;br /&gt;&lt;br /&gt;
+&lt;code class=&quot;language-text&quot;&gt;git stash list&lt;/code&gt; : &lt;br /&gt;저장한 Stash를 확인한다.&lt;br /&gt;&lt;br /&gt;
+&lt;code class=&quot;language-text&quot;&gt;git stash apply &amp;lt;이름&amp;gt;&lt;/code&gt; : &lt;br /&gt;Stash 적용하기, 이름이 없으면 Git은 가장 최근의 Stash를 적용한다.&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;꼭 깨끗한 워킹 디렉토리나 Stash 할 때와 같은 브랜치에 적용해야 하는 것은 아니다.
+만약 충돌이 있으면 알려준다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;git stash apply —index&lt;/code&gt; : &lt;br /&gt;Stash를 적용할 때 Staged 상태였던 파일을 Staged 상태까지 적용한다.&lt;br /&gt;&lt;br /&gt;
+&lt;code class=&quot;language-text&quot;&gt;git stash drop&lt;/code&gt; : &lt;br /&gt;Stash를 제거한다.&lt;br /&gt;&lt;br /&gt;
+&lt;code class=&quot;language-text&quot;&gt;git stash pop&lt;/code&gt; : &lt;br /&gt;Stash를 적용하고 나서 바로 스택에서 제거해준다.&lt;br /&gt;&lt;br /&gt;
+&lt;code class=&quot;language-text&quot;&gt;git stash -u&lt;/code&gt; : &lt;br /&gt;기본적으로 &lt;code class=&quot;language-text&quot;&gt;git stash&lt;/code&gt; 는 추적 중인 파일만 저장한다. 추적 중이지 않은 파일을 같이 저장하려면 &lt;code class=&quot;language-text&quot;&gt;-u&lt;/code&gt; 옵션을 붙여준다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;Stash를 적용한 브랜치 만들기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;수정한 파일에 Stash를 적용하면 충돌이 일어날 수 있고 그러면 또 충돌을 해결해야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git stash branch &amp;lt;브랜치&amp;gt;&lt;/code&gt; 명령을 실행하면 Stash 할 당시의 커밋을 Checkout 한 후 새로운 브랜치를 만들고 여기에 적용한다. 이 모든 것이 성공하면 Stash를 삭제한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
+&lt;p&gt;[문서] &lt;a href=&quot;https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Stashing%EA%B3%BC-Cleaning&quot;&gt;Stashing과 Cleaning&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Git] Rebase(리베이스, 재배치)]]></title><description><![CDATA[웹 개발 회사에서 일을 막 시작했을 때, git rebase 기능을 잘못 사용해서 중복 커밋을 10…]]></description><link>https://beanba.site/git-rebase/</link><guid isPermaLink="false">https://beanba.site/git-rebase/</guid><pubDate>Sat, 19 Jun 2021 10:16:00 GMT</pubDate><content:encoded>&lt;p&gt;웹 개발 회사에서 일을 막 시작했을 때, git rebase 기능을 잘못 사용해서 중복 커밋을 100개 이상 만들어 낸 적이 있다..😂
+그때, 리베이스를 제대로 알고 써야겠다 생각해서 정리해둔 문서가 있었는데 블로그에도 포스팅 해보려고 한다.&lt;/p&gt;
+&lt;h2&gt;Rebase란?&lt;/h2&gt;
+&lt;p&gt;리베이스는 커밋의 베이스를 똑 떼서 다른 곳으로 붙이는 것이다.&lt;/p&gt;
+&lt;h2&gt;Merge와 Rebase 차이점&lt;/h2&gt;
+&lt;p&gt;코드 충돌이 발생했을 때, 내 브랜치로 먼저 머지하고, 충돌을 해결한 다음 다시 풀 리퀘스트를 보내면 충돌이 나지 않는다. 하지만 풀 리퀘스트에 충돌을 해결하느라 생긴 머지 커밋이 생긴다.
+&lt;strong&gt;리베이스는 깔끔하게 변경한 부분만 풀 리퀘스트를 보낼 수 있는 방법이다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Rebase 원리&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;HEAD(feature)와 대상 브랜치(master)의 공통 조상을 찾는다.&lt;/li&gt;
+&lt;li&gt;공통 조상 이후에 생성한 커밋들을 대상 브랜치(master) 뒤(마지막 커밋)로 재배치한다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;리베이스 완료된 커밋들은 체크섬이 바뀐 새로운 커밋이다.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Rebase 방법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git checkout feature&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git rebase master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git merge feature&lt;/code&gt; : 한 줄이 되었기 때문에 빨리 감기 병합을 수행한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Rebase 주의사항&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;원격 저장소에 푸시한 브랜치는 rebase하지 않는 것이 원칙이다.&lt;/li&gt;
+&lt;li&gt;예를 들어 C1 커밋을 원격에 푸시하고 rebase를 하게 되면 원격에는 C1이 존재하고 로컬에는 다른 커밋인 C1`가 생성된다.&lt;/li&gt;
+&lt;li&gt;동일한 커밋의 사본이 여러개 존재하게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Rebase로 특정 시점 Commit 지우는 방법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git rebase -i HEAD~n&lt;/code&gt; : &lt;br /&gt;지우고 싶은 커밋이 보이는 곳 까지(n) 이동&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;지우고 싶은 커밋 키워드를 &lt;code class=&quot;language-text&quot;&gt;drop&lt;/code&gt;으로 수정&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
+&lt;p&gt;[서적] 팀 개발을 위한 Git, GitHub 시작하기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[React] Popover 컴포넌트 만들기]]></title><description><![CDATA[최근 3개월 동안 회사에서 에디터(웹 빌더) 개발을 진행했다.
+에디터는 특정 Block에 마우스를 hover하면, 툴 박스 버튼 그룹이 나타나고, 툴 박스 버튼을 클릭하면 설정 창이 Popover…]]></description><link>https://beanba.site/editor-popover/</link><guid isPermaLink="false">https://beanba.site/editor-popover/</guid><pubDate>Tue, 08 Jun 2021 14:46:00 GMT</pubDate><content:encoded>&lt;p&gt;최근 3개월 동안 회사에서 에디터(웹 빌더) 개발을 진행했다.&lt;br /&gt;
+에디터는 특정 Block에 마우스를 hover하면, 툴 박스 버튼 그룹이 나타나고, 툴 박스 버튼을 클릭하면 설정 창이 Popover 형식으로 나타나도록 디자인 되었다.&lt;/p&gt;
+&lt;p&gt;우선, Material-UI 사이트의 Popover 컴포넌트가 어떻게 구현되어 있는지 확인했다.&lt;/p&gt;
+&lt;p&gt;Material-UI 사이트의 Popover 컴포넌트는 다음과 같이 설명되어있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Things to know when using the Popover component:&lt;br /&gt;
+The component is built on top of the Modal component.&lt;br /&gt;
+The scroll and click away are blocked unlike with the Popper component.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://material-ui.com/components/popover/#popover&quot;&gt;참고 | Material-UI Popover&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Popper 컴포넌트가 나타나있는 동안 클릭과 스크롤이 막힌다는 내용이었다. Modal 컴포넌트를 기반으로 만들었기 때문인 것 같았다.&lt;br /&gt;
+에디터에서 사용할 Popover 컴포넌트는 설정 창(Popper)이 나타나있는 동안 스크롤과 클릭이 막히면 안되기 때문에 활용할 수 없었다.&lt;/p&gt;
+&lt;p&gt;에디터에서 필요한 Popover 기능을 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Block에 마우스를 hover 하면 수정 버튼이 나타난다.&lt;/li&gt;
+&lt;li&gt;수정 버튼을 클릭하면 설정 창(Popper)이 나타난다.&lt;/li&gt;
+&lt;li&gt;설정 창(Popper)이 나타나있는 동안 클릭과 스크롤이 가능해야 한다.&lt;/li&gt;
+&lt;li&gt;설정 창(Popper) 밖의 영역을 클릭하면 설정 창(Popper)이 없어져야 한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;간단한 Popover 컴포넌트 만들기&lt;/h2&gt;
+&lt;p&gt;위 조건을 만족하는 Popover를 직접 만들어보기로 했다.&lt;/p&gt;
+&lt;p&gt;먼저, React 공식 문서에 &lt;a href=&quot;https://ko.reactjs.org/docs/hooks-effect.html#effects-without-cleanup&quot;&gt;정리(clean-up)를 이용하는 Effects&lt;/a&gt; 부분을 읽어보면 도움이 많이 된다.
+useEffect에서 함수를 반환하면 해당 함수는 다음 렌더링 전에 실행된다는 것이 핵심이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Popover 컴포넌트 데모&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 마우스를 hover하면 opener가 나타나고 opener를 클릭하면 popper가 나타난다.
+- popper를 제외한 영역을 클릭하면 opener와 popper가 사라진다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/popover-8zt81?fontsize=14&amp;hidenavigation=1&amp;theme=dark&quot;
+     style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hiden;&quot;
+     title=&quot;popover&quot;
+     allow=&quot;accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking&quot;
+     sandbox=&quot;allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts&quot;
+   &gt;&lt;/iframe&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Popover 컴포넌트의 코드를 살펴보면
+Popper 컴포넌트가 화면에 나타나면 useEffect안에 이벤트 리스너가 &lt;code class=&quot;language-text&quot;&gt;pageClickEvent&lt;/code&gt;를 콜백함수로 가지는 클릭 이벤트를 등록한다.
+돔 최상단에 클릭 이벤트가 등록되었기 때문에 화면에 어디를 클릭해도 &lt;code class=&quot;language-text&quot;&gt;pageClickEvent&lt;/code&gt; 콜백함수가 실행된다.&lt;/p&gt;
+&lt;p&gt;또한, useEffect에서 해당 클릭 이벤트를 제거하는 함수를 리턴하고 있기 때문에 클릭 이벤트가 발생해서 화면이 다시 렌더링 되면 클릭 이벤트가 제거된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Popover &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;
+  React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;memo &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;
+  Props &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; onClose&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; children &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; settingsWindowRef &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; useRef &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; HTMLDivElement &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token function&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;pageClickEvent&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;e&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; any&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;settingsWindowRef&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token function&quot;&gt;onClose&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+      window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;click&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; pageClickEvent&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+      &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;removeEventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;click&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; pageClickEvent&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Wrapper ref&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;settingsWindowRef&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;children&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;Wrapper&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Popper(설정 창)을 useRef를 사용해서 pageClickEvent 함수에서 제외하는 이유는
+설정 창 안 내용을 클릭했을 때는 Popper(설정 창)이 닫히면 안되기 때문이다.&lt;/p&gt;
+&lt;p&gt;에디터 프로젝트에서는 Popper(설정 창)이 사라지는 타이밍에 캐시 업데이트 하는 함수가 실행되어야 했었는데
+Popover 컴포넌트에 해당 함수를 props(onClose)로 전달해서 &lt;code class=&quot;language-text&quot;&gt;pageClick&lt;/code&gt;함수 안에 넣어주었다.&lt;/p&gt;</content:encoded></item></channel></rss>
