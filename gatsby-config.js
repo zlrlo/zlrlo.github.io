@@ -5,7 +5,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Mirabel blog',
+    title: 'Beanba blog',
     description: "A blog that records and shares what I've learned.",
     siteUrl: 'https://beanba.site', // full path to blog - no ending slash
   },

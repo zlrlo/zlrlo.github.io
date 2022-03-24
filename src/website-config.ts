@@ -49,7 +49,7 @@ export interface WebsiteConfig {
 }
 
 const config: WebsiteConfig = {
-  title: 'Mirabel | 기술 블로그',
+  title: 'Beanba | 기술 블로그',
   description: '',
   coverImage: 'img/blog-cover.png',
   logo: 'img/ghost-logo.png',
