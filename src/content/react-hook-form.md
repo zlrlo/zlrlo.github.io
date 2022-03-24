@@ -2,7 +2,7 @@
 layout: post
 title: '[React] react-hook-form 사용법'
 author: [Beanba]
-tags: ['Web Frontend']
+tags: ['dev']
 image: img/react-hook-form.png
 date: '2021-09-22T22:11'
 draft: false
