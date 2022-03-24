@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://beanba.site/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/editor-popover/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/git-rebase/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/git-stash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/leetcode/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/bouncing-ball/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/react-hook-form/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/infinite-scroll/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/gatsby-netlify-seo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/react-virtualized/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/shared-taxi-fare/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/github-link/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/tags/web-frontend/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/tags/dev/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/tags/algorithm/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/tags/source/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/author/mirabel/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://beanba.site/author/ghost/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/editor-popover/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/git-rebase/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/git-stash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/leetcode/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/bouncing-ball/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/react-hook-form/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/infinite-scroll/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/gatsby-netlify-seo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/react-virtualized/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/shared-taxi-fare/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/github-link/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/tags/web-frontend/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/tags/dev/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/tags/algorithm/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/tags/source/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/author/beanba/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://zlrlo.github.io/author/ghost/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://beanba.site/sitemap.xml
-Host: https://beanba.site
+Sitemap: https://zlrlo.github.io/sitemap.xml
+Host: https://zlrlo.github.io
