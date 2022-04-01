@@ -69,7 +69,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://beanba-blog.netlify.app',
+        siteUrl: 'https://zlrlo.github.io/',
       },
     },
     'gatsby-plugin-typescript',
@@ -162,6 +162,15 @@ module.exports = {
       options: {
         fonts: [`Noto Serif KR\:200,300,400,500,600,700,900`, `Noto Sans KR\:100,300,400,500,700`],
         display: 'swap',
+      },
+    },
+    `gatsby-plugin-client-side-redirect`,
+    {
+      resolve: `gatsby-plugin-redirect-to`,
+      options: {
+        force: true,
+        isPermanent: true,
+        redirectInBrowser: true,
       },
     },
   ],

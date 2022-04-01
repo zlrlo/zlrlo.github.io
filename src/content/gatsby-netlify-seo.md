@@ -6,6 +6,7 @@ tags: ['dev']
 image: img/seo.jpg
 date: '2021-10-04T23:16'
 draft: false
+redirect: https://zlrlo.github.io/gatsby-netlify-seo/
 ---
 
 휑하던 블로그에 몇 개 글을 올리고 나니 이제 구글에서 내 블로그가 검색되면 좋겠다는 생각이 들었다.
