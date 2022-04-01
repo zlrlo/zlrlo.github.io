@@ -48,11 +48,11 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
 
   createRedirect({
-    fromPath: '/',
-    toPath: 'https://zlrlo.github.io/',
+    fromPath: '/react-hook-form',
+    toPath: 'https://zlrlo.github.io/react-hook-form',
     isPermanent: true,
     force: true,
-    statusCode: 200,
+    statusCode: 301,
   });
 
   const result = await graphql(`
