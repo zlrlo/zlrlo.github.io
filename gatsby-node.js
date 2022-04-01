@@ -55,6 +55,22 @@ exports.createPages = async ({ graphql, actions }) => {
     statusCode: 301,
   });
 
+  createRedirect({
+    fromPath: '/git-rebase',
+    toPath: 'https://zlrlo.github.io/git-rebase',
+    isPermanent: true,
+    force: true,
+    statusCode: 301,
+  });
+
+  createRedirect({
+    fromPath: '/gatsby-netlify-seo',
+    toPath: 'https://zlrlo.github.io/gatsby-netlify-seo',
+    isPermanent: true,
+    force: true,
+    statusCode: 301,
+  });
+
   const result = await graphql(`
     {
       allMarkdownRemark(

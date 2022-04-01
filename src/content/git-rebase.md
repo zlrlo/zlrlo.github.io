@@ -6,7 +6,6 @@ tags: ['dev']
 image: img/github.jpeg
 date: '2021-06-19T19:16'
 draft: false
-redirect: https://zlrlo.github.io/git-rebase/
 ---
 
 웹 개발 회사에서 일을 막 시작했을 때, git rebase 기능을 잘못 사용해서 중복 커밋을 100개 이상 만들어 낸 적이 있다..😂
