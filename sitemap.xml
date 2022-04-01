@@ -10,8 +10,6 @@
 <url> <loc>https://zlrlo.github.io/gatsby-netlify-seo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://zlrlo.github.io/react-virtualized/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://zlrlo.github.io/shared-taxi-fare/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://zlrlo.github.io/github-link/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://zlrlo.github.io/tags/dev/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://zlrlo.github.io/tags/source/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://zlrlo.github.io/author/beanba/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
