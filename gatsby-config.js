@@ -173,5 +173,6 @@ module.exports = {
         redirectInBrowser: true,
       },
     },
+    `gatsby-plugin-netlify`,
   ],
 };

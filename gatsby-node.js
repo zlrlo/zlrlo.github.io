@@ -46,7 +46,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
-  createRedirect({ fromPath: '/beanba.site', toPath: '/zlrlo.github.io', isPermanent: true });
+
+  createRedirect({
+    fromPath: '/',
+    toPath: 'https://zlrlo.github.io/',
+    isPermanent: true,
+    force: true,
+    statusCode: 200,
+  });
 
   const result = await graphql(`
     {
