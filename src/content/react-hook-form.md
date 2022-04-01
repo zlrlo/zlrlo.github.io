@@ -6,6 +6,7 @@ tags: ['dev']
 image: img/react-hook-form.png
 date: '2021-09-22T22:11'
 draft: false
+redirect: https://zlrlo.github.io/react-hook-form/
 ---
 
 **react-hook-form**을 사용해서 사용자 입력 데이터를 서버로 전송하는 기능을 구현해보았다.

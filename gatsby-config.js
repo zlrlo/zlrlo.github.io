@@ -165,5 +165,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-client-side-redirect`,
+    {
+      resolve: `gatsby-plugin-redirect-to`,
+      options: {
+        force: true,
+        isPermanent: true,
+        redirectInBrowser: true,
+      },
+    },
   ],
 };
