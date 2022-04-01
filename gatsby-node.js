@@ -71,6 +71,22 @@ exports.createPages = async ({ graphql, actions }) => {
     statusCode: 301,
   });
 
+  createRedirect({
+    fromPath: '/tags/web-frontend',
+    toPath: 'https://zlrlo.github.io/tags/dev',
+    isPermanent: true,
+    force: true,
+    statusCode: 301,
+  });
+
+  createRedirect({
+    fromPath: '/',
+    toPath: 'https://zlrlo.github.io',
+    isPermanent: true,
+    force: true,
+    statusCode: 301,
+  });
+
   const result = await graphql(`
     {
       allMarkdownRemark(
