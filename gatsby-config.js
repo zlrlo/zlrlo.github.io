@@ -69,7 +69,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://beanba-blog.netlify.app',
+        siteUrl: 'https://zlrlo.github.io/',
       },
     },
     'gatsby-plugin-typescript',
